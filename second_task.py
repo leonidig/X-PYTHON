@@ -4,6 +4,9 @@ def fix_ingredients(ingredients: list[str]) -> list[str]:
     if not all(isinstance(item, str) for item in ingredients):
         raise TypeError("All elements must be strings")
 
+
+    # Можу так -> return [element[::-1] if not element.lower().startswith("z") else element for element in ingredients]
+
     fixed_ingredients = []
     for ingredient in ingredients:
         if not ingredient.casefold().startswith("z"):
@@ -13,9 +16,8 @@ def fix_ingredients(ingredients: list[str]) -> list[str]:
 
     return fixed_ingredients
 
+
+
 if __name__ == "__main__":
     pass
-    # ОСЬ ТУТ МОЇ ТЕСТИ ->
-    # print(fix_ingredients(["sugar", "zmilk", "retaW", "salt", "honey"]))
-    # print(fix_ingredients(["zFlour", "liO", "hcaetS"]))
-    # print(fix_ingredients(["zSalt", "retniW", "kcab"]))
+# Тести не хочу в код пхати але я робив
