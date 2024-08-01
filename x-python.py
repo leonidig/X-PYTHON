@@ -1,3 +1,12 @@
+
+def extract_birds(message: str) -> list[str]:
+    birds = ''.join(char for char in message if char.isalpha() or char.isspace()).split()
+    return birds
+
+# Тести не хочу в код пхати але я робив
+
+
+
 def fix_ingredients(ingredients: list[str]) -> list[str]:
     if not isinstance(ingredients, list):
         raise TypeError("ingredients must be a list")
